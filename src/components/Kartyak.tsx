@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import type { SzobaTipus } from "../adatok"
 import Kartya from "./Kartya"
 import "./kartyak.css";

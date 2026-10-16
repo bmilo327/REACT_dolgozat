@@ -1,14 +1,12 @@
-import { TANULOSZOBAK } from './adatok'
+import { TANULOSZOBAK, type SzobaTipus } from './adatok'
 import './App.css'
-import "./kartyak.css";
+import "./components/kartyak.css";
 import { Kartyak } from './components/Kartyak'
 import { useState } from 'react';
+import { useKartyaContext } from './contexts/KartyaContext';
 
 export default function App() {
-
-  function ferohelyNovel(index:number) {
-    
-  }
+  const {lista} = useKartyaContext()  
 
   return (
     <>
@@ -18,7 +16,7 @@ export default function App() {
       </header>
       <aside></aside>
       <article>
-        <Kartyak lista={TANULOSZOBAK} ferohelyNovel ={ferohelyNovel}/>
+        <Kartyak lista={lista}/>
       </article>
       <aside></aside>
       <footer>
