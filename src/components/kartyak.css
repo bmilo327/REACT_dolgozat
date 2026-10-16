@@ -11,24 +11,38 @@ aside{
 }
 
 article{
-    
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .kartyak{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .kartya{
-    width: 300px;
+    width: 250px;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.szoba-tulajdonsagok{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .foglal-gomb{
     background-color: black;
     color: white;
+    border-style: none;
+    border-radius: 10px;
+    padding: 10px;
 }
 
-footer{
-    
+footer p{
+    padding: 10px;
 }

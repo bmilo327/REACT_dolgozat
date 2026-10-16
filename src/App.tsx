@@ -2,9 +2,13 @@ import { TANULOSZOBAK } from './adatok'
 import './App.css'
 import "./kartyak.css";
 import { Kartyak } from './components/Kartyak'
+import { useState } from 'react';
 
 export default function App() {
-  
+
+  function ferohelyNovel(index:number) {
+    
+  }
 
   return (
     <>
@@ -14,7 +18,7 @@ export default function App() {
       </header>
       <aside></aside>
       <article>
-        <Kartyak lista={TANULOSZOBAK}/>
+        <Kartyak lista={TANULOSZOBAK} ferohelyNovel ={ferohelyNovel}/>
       </article>
       <aside></aside>
       <footer>

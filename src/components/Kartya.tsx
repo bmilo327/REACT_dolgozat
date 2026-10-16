@@ -3,20 +3,23 @@ import { type SzobaTipus } from "../adatok";
 
 export interface KartyaProps {
     szoba: SzobaTipus,
-    index: number
+    index: number,
+    ferohelyNovel: (index:number) =>void
 }
 
-export default function Kartya({szoba, index}: KartyaProps) {
+export default function Kartya({szoba, index, ferohelyNovel}: KartyaProps) {
     return(
         <div className="kartya">
             <h3>{szoba.szoba_nev}</h3>
             <p>{szoba.szobatipus}</p>
-            <div>
-                <p>{szoba.emelet}</p>
-                <p>{szoba.ferohely}</p>
-                <p>{szoba.foglalt_helyek}</p>
+            <div className="szoba-tulajdonsagok">
+                <p>ID {szoba.id}</p>
+                <p>Szobatípus {szoba.szobatipus}</p>
+                <p>Emelet {szoba.emelet}.</p>
+                <p>Férőhely {szoba.ferohely} fő</p>
+                <p>Foglalt helyek {szoba.foglalt_helyek} fő</p>
             </div>
-            <button className="foglal-gomb">Helyet foglalok</button>
+            <button className="foglal-gomb" onClick={ferohelyNovel}>Helyet foglalok</button>
         </div>
     )
 }
