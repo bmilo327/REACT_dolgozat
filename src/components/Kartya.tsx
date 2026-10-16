@@ -1,18 +1,19 @@
 import { type SzobaTipus } from "../adatok";
 
 export interface KartyaProps {
-    szoba: SzobaTipus[],
+    szoba: SzobaTipus,
+    index: number
 }
 
-export default function Kartya({szoba_nev, szobatipus, emelet, ferohely, foglalt_helyek}: SzobaTipus) {
+export default function Kartya({szoba, index}: KartyaProps) {
     return(
         <div className="kartya">
-            <h1>{szoba_nev}</h1>
-            <p>{szobatipus}</p>
+            <h3>{szoba.szoba_nev}</h3>
+            <p>{szoba.szobatipus}</p>
             <div>
-                <p>{emelet}</p>
-                <p>{ferohely}</p>
-                <p>{foglalt_helyek}</p>
+                <p>{szoba.emelet}</p>
+                <p>{szoba.ferohely}</p>
+                <p>{szoba.foglalt_helyek}</p>
             </div>
             <button className="foglal-gomb"></button>
         </div>

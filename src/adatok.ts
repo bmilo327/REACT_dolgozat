@@ -11,7 +11,7 @@ export interface SzobaTipus {
 }
 
 
-export const TANULOSZOBAK = [
+export const TANULOSZOBAK: SzobaTipus[] = [
     {
         id: 1,
         szoba_nev: "Csendes kuckó",
