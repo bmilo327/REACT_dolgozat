@@ -1,3 +1,4 @@
+import "./kartyak.css";
 import { type SzobaTipus } from "../adatok";
 
 export interface KartyaProps {
@@ -15,7 +16,7 @@ export default function Kartya({szoba, index}: KartyaProps) {
                 <p>{szoba.ferohely}</p>
                 <p>{szoba.foglalt_helyek}</p>
             </div>
-            <button className="foglal-gomb"></button>
+            <button className="foglal-gomb">Helyet foglalok</button>
         </div>
     )
 }

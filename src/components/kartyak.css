@@ -1,0 +1,34 @@
+.root {
+    
+}
+
+header{
+    
+}
+
+aside{
+    
+}
+
+article{
+    
+}
+
+.kartyak{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.kartya{
+    width: 300px;
+}
+
+.foglal-gomb{
+    background-color: black;
+    color: white;
+}
+
+footer{
+    
+}
